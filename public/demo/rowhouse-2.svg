@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-label="Placeholder photograph — rear terrace">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#274767"/>
+      <stop offset="55%" stop-color="#11243a"/>
+      <stop offset="100%" stop-color="#050d16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#wash)"/>
+  <circle cx="548" cy="393" r="209" fill="#e2eaf2" opacity="0.16"/>
+  <rect x="0" y="640" width="1600" height="460" fill="#11243a" opacity="0.75"/>
+  <path d="M0 640 Q 400 560 800 630 T 1600 610 L1600 700 L0 700 Z" fill="#274767" opacity="0.8"/>
+  <path d="M620 1100 L900 700 L1180 1100 Z" fill="#e2eaf2" opacity="0.16"/>
+  <rect x="131" y="575.95" width="22" height="64" fill="#11243a" opacity="0.8"/>
+  <circle cx="142" cy="557.65" r="51" fill="#274767" opacity="0.85"/>
+  <rect x="333" y="563.35" width="26" height="77" fill="#11243a" opacity="0.8"/>
+  <circle cx="346" cy="541.45" r="61" fill="#274767" opacity="0.85"/>
+  <rect x="569" y="565.45" width="26" height="75" fill="#11243a" opacity="0.8"/>
+  <circle cx="582" cy="544.15" r="60" fill="#274767" opacity="0.85"/>
+  <rect x="763" y="531.5" width="37" height="109" fill="#11243a" opacity="0.8"/>
+  <circle cx="782" cy="500.5" r="87" fill="#274767" opacity="0.85"/>
+  <rect x="996" y="556" width="29" height="84" fill="#11243a" opacity="0.8"/>
+  <circle cx="1010" cy="532" r="67" fill="#274767" opacity="0.85"/>
+  <rect x="1174" y="537.8" width="35" height="102" fill="#11243a" opacity="0.8"/>
+  <circle cx="1192" cy="508.6" r="82" fill="#274767" opacity="0.85"/>
+  <rect x="1395" y="524.85" width="39" height="115" fill="#11243a" opacity="0.8"/>
+  <circle cx="1415" cy="491.95" r="92" fill="#274767" opacity="0.85"/>
+  <rect x="0" y="0" width="1600" height="1100" fill="none" stroke="#c39c3d" stroke-opacity="0.18" stroke-width="4"/>
+  <text x="60" y="1030" font-family="Georgia, serif" font-size="34" fill="#c39c3d" fill-opacity="0.6">Placeholder photograph — rear terrace</text>
+  <text x="60" y="1070" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.35" letter-spacing="6">DEMO IMAGE</text>
+</svg>

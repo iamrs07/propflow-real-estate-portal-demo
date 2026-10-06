@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-label="Placeholder photograph — front garden">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#1a3350"/>
+      <stop offset="55%" stop-color="#11243a"/>
+      <stop offset="100%" stop-color="#050d16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#wash)"/>
+  <circle cx="508" cy="201" r="130" fill="#c3d3e2" opacity="0.16"/>
+  <rect x="0" y="640" width="1600" height="460" fill="#11243a" opacity="0.75"/>
+  <path d="M0 640 Q 400 560 800 630 T 1600 610 L1600 700 L0 700 Z" fill="#1a3350" opacity="0.8"/>
+  <path d="M620 1100 L900 700 L1180 1100 Z" fill="#c3d3e2" opacity="0.16"/>
+  <rect x="121" y="539.9" width="34" height="100" fill="#11243a" opacity="0.8"/>
+  <circle cx="138" cy="511.29999999999995" r="80" fill="#1a3350" opacity="0.85"/>
+  <rect x="318" y="567.2" width="25" height="73" fill="#11243a" opacity="0.8"/>
+  <circle cx="330" cy="546.4" r="58" fill="#1a3350" opacity="0.85"/>
+  <rect x="530" y="552.5" width="30" height="88" fill="#11243a" opacity="0.8"/>
+  <circle cx="545" cy="527.5" r="70" fill="#1a3350" opacity="0.85"/>
+  <rect x="766" y="532.55" width="37" height="107" fill="#11243a" opacity="0.8"/>
+  <circle cx="784" cy="501.85" r="86" fill="#1a3350" opacity="0.85"/>
+  <rect x="952" y="556.7" width="29" height="83" fill="#11243a" opacity="0.8"/>
+  <circle cx="966" cy="532.9" r="67" fill="#1a3350" opacity="0.85"/>
+  <rect x="1182" y="571.4" width="24" height="69" fill="#11243a" opacity="0.8"/>
+  <circle cx="1194" cy="551.8" r="55" fill="#1a3350" opacity="0.85"/>
+  <rect x="1391" y="533.6" width="36" height="106" fill="#11243a" opacity="0.8"/>
+  <circle cx="1409" cy="503.2" r="85" fill="#1a3350" opacity="0.85"/>
+  <rect x="0" y="0" width="1600" height="1100" fill="none" stroke="#d8b45c" stroke-opacity="0.18" stroke-width="4"/>
+  <text x="60" y="1030" font-family="Georgia, serif" font-size="34" fill="#d8b45c" fill-opacity="0.6">Placeholder photograph — front garden</text>
+  <text x="60" y="1070" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.35" letter-spacing="6">DEMO IMAGE</text>
+</svg>

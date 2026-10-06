@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-label="Placeholder photograph — villa frontage">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#274767"/>
+      <stop offset="55%" stop-color="#0a1826"/>
+      <stop offset="100%" stop-color="#050d16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#wash)"/>
+  <circle cx="502" cy="419" r="200" fill="#93aec7" opacity="0.16"/>
+  <polygon points="180,860 800,430 1420,860" fill="#274767" opacity="0.9"/>
+  <rect x="300" y="620" width="1000" height="420" fill="#0a1826" opacity="0.72"/>
+  <rect x="370" y="660" width="120" height="110" rx="4" fill="#93aec7" opacity="0.18"/>
+  <rect x="560" y="660" width="120" height="110" rx="4" fill="#eddfae" opacity="0.42"/>
+  <rect x="750" y="660" width="120" height="110" rx="4" fill="#93aec7" opacity="0.18"/>
+  <rect x="940" y="660" width="120" height="110" rx="4" fill="#93aec7" opacity="0.18"/>
+  <rect x="1130" y="660" width="120" height="110" rx="4" fill="#93aec7" opacity="0.18"/>
+  <rect x="370" y="830" width="120" height="110" rx="4" fill="#93aec7" opacity="0.18"/>
+  <rect x="560" y="830" width="120" height="110" rx="4" fill="#eddfae" opacity="0.42"/>
+  <rect x="750" y="830" width="120" height="110" rx="4" fill="#93aec7" opacity="0.18"/>
+  <rect x="940" y="830" width="120" height="110" rx="4" fill="#eddfae" opacity="0.42"/>
+  <rect x="1130" y="830" width="120" height="110" rx="4" fill="#eddfae" opacity="0.42"/>
+  <rect x="720" y="880" width="170" height="160" rx="6" fill="#eddfae" opacity="0.34"/>
+  <rect x="0" y="1040" width="1600" height="60" fill="#0a1826"/>
+  <rect x="0" y="0" width="1600" height="1100" fill="none" stroke="#eddfae" stroke-opacity="0.18" stroke-width="4"/>
+  <text x="60" y="1030" font-family="Georgia, serif" font-size="34" fill="#eddfae" fill-opacity="0.6">Placeholder photograph — villa frontage</text>
+  <text x="60" y="1070" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.35" letter-spacing="6">DEMO IMAGE</text>
+</svg>

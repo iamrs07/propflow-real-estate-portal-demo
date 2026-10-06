@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-label="Placeholder photograph — redone kitchen">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#1a3350"/>
+      <stop offset="55%" stop-color="#0a1826"/>
+      <stop offset="100%" stop-color="#050d16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#wash)"/>
+  <circle cx="534" cy="220" r="161" fill="#c3d3e2" opacity="0.16"/>
+  <rect x="210" y="301" width="220" height="523" rx="6" fill="#c3d3e2" opacity="0.22"/>
+  <rect x="210" y="305" width="220" height="523" rx="6" fill="none" stroke="#eddfae" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="320" y1="313" x2="320" y2="823" stroke="#eddfae" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="510" y="338" width="220" height="505" rx="6" fill="#c3d3e2" opacity="0.22"/>
+  <rect x="510" y="334" width="220" height="505" rx="6" fill="none" stroke="#eddfae" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="620" y1="310" x2="620" y2="805" stroke="#eddfae" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="810" y="304" width="220" height="494" rx="6" fill="#c3d3e2" opacity="0.22"/>
+  <rect x="810" y="325" width="220" height="494" rx="6" fill="none" stroke="#eddfae" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="920" y1="336" x2="920" y2="794" stroke="#eddfae" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="1110" y="316" width="220" height="489" rx="6" fill="#c3d3e2" opacity="0.22"/>
+  <rect x="1110" y="339" width="220" height="489" rx="6" fill="none" stroke="#eddfae" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="1220" y1="337" x2="1220" y2="789" stroke="#eddfae" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="0" y="820" width="1600" height="280" fill="#0a1826" opacity="0.55"/>
+  <rect x="240" y="700" width="520" height="140" rx="10" fill="#1a3350" opacity="0.9"/>
+  <rect x="900" y="660" width="150" height="180" rx="8" fill="#eddfae" opacity="0.28"/>
+  <rect x="0" y="0" width="1600" height="1100" fill="none" stroke="#eddfae" stroke-opacity="0.18" stroke-width="4"/>
+  <text x="60" y="1030" font-family="Georgia, serif" font-size="34" fill="#eddfae" fill-opacity="0.6">Placeholder photograph — redone kitchen</text>
+  <text x="60" y="1070" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.35" letter-spacing="6">DEMO IMAGE</text>
+</svg>

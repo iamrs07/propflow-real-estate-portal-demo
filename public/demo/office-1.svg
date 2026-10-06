@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-label="Placeholder photograph — office floor">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#274767"/>
+      <stop offset="55%" stop-color="#0a1826"/>
+      <stop offset="100%" stop-color="#050d16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#wash)"/>
+  <circle cx="514" cy="265" r="183" fill="#e2eaf2" opacity="0.16"/>
+  <rect x="210" y="301" width="220" height="473" rx="6" fill="#e2eaf2" opacity="0.22"/>
+  <rect x="210" y="329" width="220" height="473" rx="6" fill="none" stroke="#c39c3d" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="320" y1="309" x2="320" y2="773" stroke="#c39c3d" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="510" y="324" width="220" height="462" rx="6" fill="#e2eaf2" opacity="0.22"/>
+  <rect x="510" y="317" width="220" height="462" rx="6" fill="none" stroke="#c39c3d" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="620" y1="308" x2="620" y2="762" stroke="#c39c3d" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="810" y="303" width="220" height="516" rx="6" fill="#e2eaf2" opacity="0.22"/>
+  <rect x="810" y="326" width="220" height="516" rx="6" fill="none" stroke="#c39c3d" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="920" y1="312" x2="920" y2="816" stroke="#c39c3d" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="1110" y="339" width="220" height="527" rx="6" fill="#e2eaf2" opacity="0.22"/>
+  <rect x="1110" y="313" width="220" height="527" rx="6" fill="none" stroke="#c39c3d" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="1220" y1="316" x2="1220" y2="827" stroke="#c39c3d" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="0" y="820" width="1600" height="280" fill="#0a1826" opacity="0.55"/>
+  <rect x="240" y="700" width="520" height="140" rx="10" fill="#274767" opacity="0.9"/>
+  <rect x="900" y="660" width="150" height="180" rx="8" fill="#c39c3d" opacity="0.28"/>
+  <rect x="0" y="0" width="1600" height="1100" fill="none" stroke="#c39c3d" stroke-opacity="0.18" stroke-width="4"/>
+  <text x="60" y="1030" font-family="Georgia, serif" font-size="34" fill="#c39c3d" fill-opacity="0.6">Placeholder photograph — office floor</text>
+  <text x="60" y="1070" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.35" letter-spacing="6">DEMO IMAGE</text>
+</svg>

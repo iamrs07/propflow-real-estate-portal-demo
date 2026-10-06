@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   PropFlow design tokens
+   ---------------------------------------------------------------------------
+   Everything visual is derived from these variables, so the brokerage can be
+   re-branded by editing this block only — no component changes required.
+   Palette: deep navy chrome, off-white content surfaces, gold used sparingly
+   for primary actions, active states and highlights.
+   ========================================================================= */
+
+@theme {
+  /* Navy — navigation, hero bands, the CRM frame */
+  --color-navy-950: #050d16;
+  --color-navy-900: #0a1826;
+  --color-navy-800: #11243a;
+  --color-navy-700: #1a3350;
+  --color-navy-600: #274767;
+  --color-navy-500: #3d628a;
+  --color-navy-300: #93aec7;
+  --color-navy-200: #c3d3e2;
+  --color-navy-100: #e2eaf2;
+
+  /* Gold — primary actions, active states, thin accents */
+  --color-gold-700: #8a6716;
+  --color-gold-600: #a87f24;
+  --color-gold-500: #c39c3d;
+  --color-gold-400: #d8b45c;
+  --color-gold-200: #eddfae;
+  --color-gold-100: #f7efd8;
+
+  /* Warm neutrals — content surfaces */
+  --color-sand-50: #fdfcfa;
+  --color-sand-100: #f8f6f1;
+  --color-sand-200: #efece4;
+  --color-sand-300: #e2ddd1;
+  --color-sand-400: #cbc4b4;
+  --color-sand-600: #6f6a5f;
+  --color-sand-700: #514d45;
+  --color-sand-900: #2a2822;
+
+  /* Support — status only, never decorative */
+  --color-positive-600: #1f6f4a;
+  --color-positive-100: #e2f2ea;
+  --color-caution-700: #8a5a10;
+  --color-caution-100: #fbeed6;
+  --color-critical-700: #8f2b2b;
+  --color-critical-100: #f8e5e5;
+  --color-info-700: #244f7a;
+  --color-info-100: #e3edf6;
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "Times New Roman", ui-serif, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(10 24 38 / 0.04), 0 8px 24px -12px rgb(10 24 38 / 0.12);
+  --shadow-raised: 0 2px 4px rgb(10 24 38 / 0.06), 0 18px 40px -20px rgb(10 24 38 / 0.24);
+
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-sand-100);
+    color: var(--color-navy-900);
+    font-family: var(--font-sans);
+    font-feature-settings: "kern", "liga";
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* A single, obvious focus treatment everywhere, including custom controls. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold-600);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-gold-200);
+    color: var(--color-navy-950);
+  }
+}
+
+@layer components {
+  /* Skip link — visible only when focused. */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    left: 0.75rem;
+    top: 0.75rem;
+    padding: 0.5rem 0.875rem;
+    background: var(--color-navy-900);
+    color: white;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
