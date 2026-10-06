@@ -25,3 +25,8 @@ pnpm-debug.log*
 yarn-error.log*
 .vercel
 *.tsbuildinfo
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
