@@ -233,3 +233,59 @@ export const AMENITY_CHOICES = [
 ] as const;
 
 export const BEDROOM_CHOICES = [1, 2, 3, 4, 5] as const;
+
+/**
+ * Mumbai City and Mumbai Suburban areas — the brokerage's default service boundary.
+ * These are the only cities and localities accepted for new listings.
+ * Do not include Thane, Navi Mumbai, or other nearby cities unless explicitly expanded.
+ */
+export const MUMBAI_LOCALITIES = [
+  // Mumbai City (South Mumbai)
+  "Colaba", "Cuffe Parade", "Nariman Point", "Churchgate", "Marine Lines",
+  "Fort", "Ballard Estate", "Kalbadevi", "Bhuleshwar", "Marine Drive",
+  "Malabar Hill", "Walkeshwar", "Napean Sea Road", "Breach Candy", "Cumballa Hill",
+  "Pedder Road", "Altamount Road", "Tardeo", "Kemps Corner", "Gowalia Tank",
+  "Worli", "Prabhadevi", "Dadar", "Matunga", "Sion", "Mahim",
+  // Mumbai Suburban (Western)
+  "Bandra", "Bandra West", "Bandra East", "Khar", "Khar West", "Khar East",
+  "Santacruz", "Santacruz West", "Santacruz East", "Vile Parle", "Vile Parle West",
+  "Vile Parle East", "Andheri", "Andheri West", "Andheri East", "Juhu",
+  "Versova", "Lokhandwala", "Four Bungalows", "Seven Bungalows", "Oshiwara",
+  "Goregaon", "Goregaon West", "Goregaon East", "Malad", "Malad West",
+  "Malad East", "Kandivali", "Kandivali West", "Kandivali East", "Borivali",
+  "Borivali West", "Borivali East", "Dahisar", "Mira Road", "Bhayandar",
+  // Mumbai Suburban (Central)
+  "Kurla", "Kurla West", "Kurla East", "Chembur", "Chembur East", "Chembur West",
+  "Deonar", "Govandi", "Mankhurd", "Trombay", "Ghatkopar", "Ghatkopar West",
+  "Ghatkopar East", "Vikhroli", "Vikhroli West", "Vikhroli East", "Kanjurmarg",
+  "Bhandup", "Bhandup West", "Bhandup East", "Mulund", "Mulund West",
+  "Mulund East", "Thane", "Thane West", "Thane East", "Dombivli", "Kalyan",
+  // Mumbai Suburban (Harbour)
+  "Panvel", "New Panvel", "Kharghar", "Kamothe", "Kalamboli", "Taloja",
+  "Uran", "Navi Mumbai", "Vashi", "Sanpada", "Nerul", "CBD Belapur",
+  "Kharghar", "Airoli", "Ghansoli", "Koparkhairane", "Turbhe",
+] as const;
+
+export type MumbaiLocality = (typeof MUMBAI_LOCALITIES)[number];
+
+/**
+ * Validates that a city value is Mumbai (case-insensitive).
+ * The brokerage serves Mumbai City and Mumbai Suburban only.
+ */
+export function isMumbaiCity(city: string): boolean {
+  return city.trim().toLowerCase() === "mumbai";
+}
+
+/**
+ * Validates that a locality is in the allowed Mumbai list.
+ */
+export function isMumbaiLocality(locality: string): boolean {
+  return MUMBAI_LOCALITIES.some(
+    (allowed) => allowed.toLowerCase() === locality.trim().toLowerCase(),
+  );
+}
+
+/**
+ * The only city value accepted by the application.
+ */
+export const ONLY_CITY = "Mumbai" as const;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPublicProperty } from "@/lib/data/public";
+import { isDemoMode } from "@/lib/env";
 import {
   FURNISHING_LABELS,
   LISTING_TYPE_LABELS,
@@ -39,6 +40,7 @@ export default async function PropertyDetailPage({
 }) {
   const { reference } = await params;
   const property = await getPublicProperty(reference);
+  const demo = isDemoMode();
 
   // A draft, archived or unavailable listing is indistinguishable from one that
   // never existed — the public RPC does not return it — but the status code is a
@@ -105,6 +107,7 @@ export default async function PropertyDetailPage({
               </Badge>
               <Badge tone="navy">{PROPERTY_TYPE_LABELS[property.property_type]}</Badge>
               {property.negotiable ? <Badge tone="neutral">Price negotiable</Badge> : null}
+              {demo ? <Badge tone="navy">Demo listing</Badge> : null}
             </div>
 
             <h1 className="mt-4 font-display text-3xl leading-tight text-navy-900 sm:text-4xl">

@@ -401,9 +401,10 @@ test("each demo visit stays assigned to its intended agent", () => {
  * the pairing, and with it the address and map link, which repeat the same pair.
  */
 const LOCALITIES_BY_CITY = {
-  Pune: ["Koregaon Park", "Kothrud", "Baner"],
-  Bengaluru: ["HSR Layout", "Sarjapur Road", "Indiranagar"],
-  Hyderabad: ["Kokapet"],
+  Mumbai: [
+    "Bandra West", "Juhu", "Andheri East", "Goregaon East",
+    "Khar West", "Malad West", "Borivali West"
+  ],
 };
 
 test("every demo listing's locality belongs to its city", () => {

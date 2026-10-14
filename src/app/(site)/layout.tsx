@@ -16,6 +16,7 @@ import { SiteFooter } from "@/components/site-footer";
 export default async function SiteLayout({ children }: { children: ReactNode }) {
   const agency = await getAgency();
   const contactInert = isDemoMode();
+  const isDemo = isDemoMode();
 
   if (!agency) {
     return (
@@ -33,11 +34,11 @@ export default async function SiteLayout({ children }: { children: ReactNode }) 
 
   return (
     <>
-      <SiteHeader agency={agency} contactInert={contactInert} />
+      <SiteHeader agency={agency} contactInert={contactInert} isDemo={isDemo} />
       <main id="main" className="flex-1">
         {children}
       </main>
-      <SiteFooter agency={agency} contactInert={contactInert} />
+      <SiteFooter agency={agency} contactInert={contactInert} isDemo={isDemo} />
     </>
   );
 }

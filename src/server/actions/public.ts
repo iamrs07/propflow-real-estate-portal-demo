@@ -68,7 +68,12 @@ export async function submitEnquiry(
   try {
     // 1. Honeypot: answer as if it worked, insert nothing.
     if (clean(formData.get(HONEYPOT_FIELD)) !== "") {
-      return { ok: true, success: true, values: {} };
+      return {
+        ok: true,
+        success: true,
+        values: {},
+        notice: isDemoMode() ? "demo" : undefined,
+      };
     }
 
     // 2. Validation.
@@ -143,7 +148,12 @@ export async function submitEnquiry(
         updated_at: new Date().toISOString(),
       });
       state.publicEnquiries += 1;
-      return { ok: true, success: true, values: {} };
+      return {
+        ok: true,
+        success: true,
+        values: {},
+        notice: "demo",
+      };
     }
 
     // 5. Server-bound tenant + database-level rate limit.

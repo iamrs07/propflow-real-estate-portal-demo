@@ -19,7 +19,7 @@ const NAV = [
  * WhatsApp values are still shown as text but never become `tel:` or `wa.me`
  * links, so a demo placeholder can never start a call.
  */
-export function SiteHeader({ agency, contactInert = false }: { agency: Agency; contactInert?: boolean }) {
+export function SiteHeader({ agency, contactInert = false, isDemo = false }: { agency: Agency; contactInert?: boolean; isDemo?: boolean }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const phone = telHref(agency.phone, { inert: contactInert });
@@ -36,6 +36,11 @@ export function SiteHeader({ agency, contactInert = false }: { agency: Agency; c
 
   return (
     <header className="sticky top-0 z-40 border-b border-navy-700/60 bg-navy-900 text-white">
+      {isDemo ? (
+        <div className="border-b border-gold-500/30 bg-gold-100 text-navy-900 text-xs text-center py-1">
+          Demo mode — fictional agency, fictional listings, fictional enquiries
+        </div>
+      ) : null}
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <span
@@ -49,7 +54,7 @@ export function SiteHeader({ agency, contactInert = false }: { agency: Agency; c
               {agency.name}
             </span>
             <span className="block text-[11px] tracking-[0.16em] text-navy-200 uppercase">
-              Rent, buy &amp; resale
+              Mumbai · Rent, buy & resale
             </span>
           </span>
         </Link>

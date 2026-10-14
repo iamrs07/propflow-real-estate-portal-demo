@@ -73,19 +73,19 @@ export const DEMO_ACCOUNTS = [
 export const DEMO_AGENCY: Agency = {
   slug: "northstar-demo",
   name: "Northstar Realty",
-  tagline: "Rental, resale and new-build homes, handled personally.",
+  tagline: "Mumbai homes — rental, resale and new-build.",
   about:
-    "Northstar Realty is a small brokerage that works a short list of homes in Pune, Bengaluru and Hyderabad. We publish only what we can stand behind: every listing is inspected, priced with the owner in the room, and handed over with a written record of what was agreed. This installation is a demonstration — the agency, the agents and every listing on this site are fictional.",
+    "Northstar Realty is a small Mumbai brokerage working a short list of homes across Mumbai City and Mumbai Suburban only. We publish what we can stand behind: every listing is visited before it goes live, priced with the owner in the room, and handed over with a written record of what was agreed. We keep our areas tight — Western line (Bandra to Borivali), Central line (Dadar to Mulund), Harbour line (Chembur to Panvel) — so we actually know the buildings, not just the brochures.\n\nThis installation is a demonstration — the agency name, agents, listings, photos and enquiries are all fictional. No real property data, prices or contact details are present. Replace this content with your verified business information before going live.",
   phone: "+91 00000 00000",
   whatsapp: "+91 00000 00000",
   email: "hello@northstar.invalid",
   office_address:
-    "Unit 4, Fictional House, 12 Example Road, Shivajinagar, Pune 411005 (demonstration address)",
-  service_areas: ["Pune", "Bengaluru", "Hyderabad"],
+    "Unit 4, Fictional House, 12 Example Road, Bandra West, Mumbai 400050 (demonstration address)",
+  service_areas: ["Mumbai"],
   map_link: null,
   privacy_contact_email: "privacy@northstar.invalid",
   privacy_notes:
-    "This is demonstration content. No real person’s data is collected by this installation. Replace this paragraph with the agency’s own plain-language data-use statement before going live.",
+    "This is demonstration content. No real person's data is collected by this installation. Replace this paragraph with your own plain-language data-use statement before going live. Include your brokerage name, registered address, and contact details for privacy requests.",
 };
 
 export const DEMO_PROFILES: Profile[] = [
@@ -106,7 +106,7 @@ export const DEMO_PROFILES: Profile[] = [
     role: "agent",
     is_active: true,
     phone: "+91 00000 00011",
-    title: "Senior Agent — Pune",
+    title: "Senior Agent — Mumbai Western",
     created_at: "2026-01-14T09:00:00.000Z",
   },
   {
@@ -116,7 +116,7 @@ export const DEMO_PROFILES: Profile[] = [
     role: "agent",
     is_active: true,
     phone: "+91 00000 00012",
-    title: "Agent — Bengaluru and Hyderabad",
+    title: "Agent — Mumbai Central",
     created_at: "2026-02-02T09:00:00.000Z",
   },
 ];
@@ -177,7 +177,7 @@ interface ListingSeed {
 const LISTINGS: ListingSeed[] = [
   {
     reference_code: "NSR-R-1001",
-    title: "Two-bedroom apartment in Koregaon Park",
+    title: "Two-bedroom apartment in Bandra West",
     headline: "Sunlit 2 BHK with a covered balcony, two minutes from the station.",
     description:
       "A quiet two-bedroom on the fourth floor of a small, well-kept building. The living room faces west, so it stays bright until late afternoon, and the balcony is covered, which makes it usable almost year round. The kitchen has been replaced in the last two years and comes with the appliances shown in the photographs.\n\nThe building has one flat per floor, a resident caretaker, and a functioning lift. Water is from a borewell with municipal backup, so supply has been reliable through two summers.",
@@ -188,20 +188,20 @@ const LISTINGS: ListingSeed[] = [
     price: 45000,
     price_period: "month",
     negotiable: true,
-    city: "Pune",
-    locality: "Koregaon Park",
+    city: "Mumbai",
+    locality: "Bandra West",
     private_address:
-      "Flat 402, Fictional Residency, 7 Example Road, Koregaon Park, Pune 411001",
+      "Flat 402, Fictional Residency, 7 Example Road, Bandra West, Mumbai 400050",
     internal_notes:
       "Owner relocating to Bengaluru in April. Flexible on notice period. Do not quote the carpet area below 940 sq ft in writing — the builder brochure rounds up.",
-    owner_name: "Fictional Owner — Koregaon Park 2BHK",
+    owner_name: "Fictional Owner — Bandra West 2BHK",
     bedrooms: 2,
     bathrooms: 2,
     area_value: 950,
     area_unit: "sqft",
     furnishing: "semi_furnished",
     amenities: ["Lift", "Power backup", "Parking", "Security", "CCTV", "Balcony"],
-    map_link: "https://www.openstreetmap.org/search?query=Koregaon%20Park%20Pune",
+    map_link: "https://www.openstreetmap.org/search?query=Bandra%20West%20Mumbai",
     year_built: 2016,
     images: [
       { path: "/demo/apartment-1.svg", alt: "Living room with west-facing windows" },
@@ -213,7 +213,7 @@ const LISTINGS: ListingSeed[] = [
   },
   {
     reference_code: "NSR-R-1002",
-    title: "Four-bedroom villa in Kothrud",
+    title: "Four-bedroom villa in Juhu",
     headline: "Independent villa with a garden, on a lane of four similar homes.",
     description:
       "A detached four-bedroom villa set back from the road behind a gate, with a planted front garden and a service passage to the back. Two bedrooms upstairs, two downstairs, and a separate utility block that currently holds the washing machine and the inverter.\n\nThe lane is narrow but paved, and the two neighbouring households are both long-term owners. Parking for two cars is inside the gate.",
@@ -224,19 +224,19 @@ const LISTINGS: ListingSeed[] = [
     price: 125000,
     price_period: "month",
     negotiable: false,
-    city: "Pune",
-    locality: "Kothrud",
+    city: "Mumbai",
+    locality: "Juhu",
     private_address:
-      "Villa 9, Fictional Enclave, 3 Example Lane, Kothrud, Pune 411038",
+      "Villa 9, Fictional Enclave, 3 Example Lane, Juhu, Mumbai 400049",
     internal_notes: "Landlord wants a 12-month lease with a 2-month deposit.",
-    owner_name: "Fictional Owner — Kothrud villa",
+    owner_name: "Fictional Owner — Juhu villa",
     bedrooms: 4,
     bathrooms: 4,
     area_value: 2400,
     area_unit: "sqft",
     furnishing: "unfurnished",
     amenities: ["Parking", "Power backup", "Gym", "Children's play area", "Piped gas"],
-    map_link: "https://www.openstreetmap.org/search?query=Kothrud%20Pune",
+    map_link: "https://www.openstreetmap.org/search?query=Juhu%20Mumbai",
     year_built: 2011,
     images: [
       { path: "/demo/villa-1.svg", alt: "Villa frontage behind a gate" },
@@ -247,7 +247,7 @@ const LISTINGS: ListingSeed[] = [
   },
   {
     reference_code: "NSR-R-1003",
-    title: "Two-bedroom office floor in HSR Layout",
+    title: "Two-bedroom office floor in Andheri East",
     headline: "Small, finished office floor suitable for four to six people.",
     description:
       "A self-contained floor in a low-rise office building, currently set up for six: a reception, one large room that divides into two, and a separate cabin. There is a small pantry at the back with a water purifier.\n\nThe building has a lift, generator backup for the common areas, and covered parking for two cars at street level. Registration is set up for a registered company address.",
@@ -258,20 +258,20 @@ const LISTINGS: ListingSeed[] = [
     price: 38000,
     price_period: "month",
     negotiable: true,
-    city: "Bengaluru",
-    locality: "HSR Layout",
+    city: "Mumbai",
+    locality: "Andheri East",
     private_address:
-      "Second floor, Fictional Business Centre, 22 Example Road, HSR Layout, Bengaluru 560102",
+      "Second floor, Fictional Business Centre, 22 Example Road, Andheri East, Mumbai 400069",
     internal_notes:
       "Owner will consider a 9-month term at a 5% discount. Stacking only after the fit-out is confirmed.",
-    owner_name: "Fictional Owner — HSR office",
+    owner_name: "Fictional Owner — Andheri East office",
     bedrooms: 2,
     bathrooms: 2,
     area_value: 1100,
     area_unit: "sqft",
     furnishing: "semi_furnished",
     amenities: ["Lift", "Power backup", "Parking", "CCTV", "Intercom", "Air conditioning"],
-    map_link: "https://www.openstreetmap.org/search?query=HSR%20Layout%20Bengaluru",
+    map_link: "https://www.openstreetmap.org/search?query=Andheri%20East%20Mumbai",
     year_built: 2019,
     images: [
       { path: "/demo/office-1.svg", alt: "Open-plan office floor" },
@@ -282,7 +282,7 @@ const LISTINGS: ListingSeed[] = [
   },
   {
     reference_code: "NSR-R-1004",
-    title: "East-facing residential plot in Sarjapur Road",
+    title: "East-facing residential plot in Goregaon East",
     headline: "2,800 sq ft plot, clear title, boundary wall already in place.",
     description:
       "A rectangular east-facing plot in a laid-out residential layout with an internal road, a drainage line and street lighting already installed. The boundary wall is up on three sides.\n\nClear title and a completed conversion certificate from the layout authority. This is a plot: there is no building on it yet, and the photographs show the plot as it stands, not a finished home.",
@@ -293,19 +293,19 @@ const LISTINGS: ListingSeed[] = [
     price: 32000,
     price_period: "month",
     negotiable: true,
-    city: "Bengaluru",
-    locality: "Sarjapur Road",
-    private_address: "Plot 41, Fictional Layout, Sarjapur Road, Bengaluru 560103",
+    city: "Mumbai",
+    locality: "Goregaon East",
+    private_address: "Plot 41, Fictional Layout, Goregaon East, Mumbai 400063",
     internal_notes:
       "Land lease, not freehold. Make sure the tenant understands this before the visit.",
-    owner_name: "Fictional Owner — Sarjapur plot",
+    owner_name: "Fictional Owner — Goregaon East plot",
     bedrooms: 0,
     bathrooms: 0,
     area_value: 2800,
     area_unit: "sqft",
     furnishing: "unfurnished",
     amenities: ["Power backup", "Rain water harvesting"],
-    map_link: "https://www.openstreetmap.org/search?query=Sarjapur%20Road%20Bengaluru",
+    map_link: "https://www.openstreetmap.org/search?query=Goregaon%20East%20Mumbai",
     year_built: null,
     images: [{ path: "/demo/plot-1.svg", alt: "Plotted land with boundary wall" }],
     published_at: iso("2026-07-20T10:00:00Z"),
@@ -313,7 +313,7 @@ const LISTINGS: ListingSeed[] = [
   },
   {
     reference_code: "NSR-S-2001",
-    title: "Three-bedroom resale apartment in Indiranagar",
+    title: "Three-bedroom resale apartment in Khar West",
     headline: "Owner-occupied 3 BHK, single family since 2015.",
     description:
       "A three-bedroom apartment on the third floor, held by one family since it was built and used as their own home throughout. The kitchen and both bathrooms were redone in 2022, and the flooring was replaced at the same time.\n\nSold with the two covered parking bays and the society share. Society charges are current and there is no pending construction work in the wing.",
@@ -324,20 +324,20 @@ const LISTINGS: ListingSeed[] = [
     price: 14500000,
     price_period: "one_time",
     negotiable: true,
-    city: "Bengaluru",
-    locality: "Indiranagar",
+    city: "Mumbai",
+    locality: "Khar West",
     private_address:
-      "Flat 303, Fictional Palm Court, 9 Example Road, Indiranagar, Bengaluru 560038",
+      "Flat 303, Fictional Palm Court, 9 Example Road, Khar West, Mumbai 400052",
     internal_notes:
       "Original purchase agreement available. Seller prefers a close by the end of the quarter.",
-    owner_name: "Fictional Seller — Indiranagar 3BHK",
+    owner_name: "Fictional Seller — Khar West 3BHK",
     bedrooms: 3,
     bathrooms: 3,
     area_value: 1450,
     area_unit: "sqft",
     furnishing: "semi_furnished",
     amenities: ["Lift", "Power backup", "Parking", "Security", "Gym", "Clubhouse", "Swimming pool"],
-    map_link: "https://www.openstreetmap.org/search?query=Indiranagar%20Bengaluru",
+    map_link: "https://www.openstreetmap.org/search?query=Khar%20West%20Mumbai",
     year_built: 2015,
     images: [
       { path: "/demo/resale-1.svg", alt: "Living area with original mouldings" },
@@ -348,7 +348,7 @@ const LISTINGS: ListingSeed[] = [
   },
   {
     reference_code: "NSR-S-2002",
-    title: "Four-bedroom row house in Kokapet",
+    title: "Four-bedroom row house in Malad West",
     headline: "Independent row house, private terrace, ground plus first.",
     description:
       "A ground-plus-first row house in a gated cluster of nineteen houses built by the same developer in one phase. There is a covered porch, a small private terrace at the rear, and a covered car park for two.\n\nThe house has been lightly used and is being sold because the family is moving abroad. The registration was done in 2018 and there is no loan outstanding.",
@@ -359,19 +359,19 @@ const LISTINGS: ListingSeed[] = [
     price: 21000000,
     price_period: "one_time",
     negotiable: false,
-    city: "Hyderabad",
-    locality: "Kokapet",
+    city: "Mumbai",
+    locality: "Malad West",
     private_address:
-      "House 14, Fictional Grove, 5 Example Road, Kokapet, Hyderabad 500033",
-    internal_notes: "NRI seller. Registry handled by the family’s own advocate in Hyderabad.",
-    owner_name: "Fictional Seller — Kokapet row house",
+      "House 14, Fictional Grove, 5 Example Road, Malad West, Mumbai 400064",
+    internal_notes: "NRI seller. Registry handled by the family's own advocate in Mumbai.",
+    owner_name: "Fictional Seller — Malad West row house",
     bedrooms: 4,
     bathrooms: 5,
     area_value: 3200,
     area_unit: "sqft",
     furnishing: "unfurnished",
     amenities: ["Parking", "Power backup", "Security", "Gym", "Children's play area", "Vaastu compliant"],
-    map_link: "https://www.openstreetmap.org/search?query=Kokapet%20Hyderabad",
+    map_link: "https://www.openstreetmap.org/search?query=Malad%20West%20Mumbai",
     year_built: 2018,
     images: [
       { path: "/demo/rowhouse-1.svg", alt: "Row house facade and porch" },
@@ -382,7 +382,7 @@ const LISTINGS: ListingSeed[] = [
   },
   {
     reference_code: "NSR-D-3001",
-    title: "One-bedroom apartment in Baner",
+    title: "One-bedroom apartment in Borivali West",
     headline: "Newly listed — photography booked, not yet published.",
     description:
       "A one-bedroom apartment on the seventh floor, handed over last month and not yet occupied. The photographs have been booked but not taken, so this listing is still a draft and is not visible on the public site.",
@@ -393,13 +393,13 @@ const LISTINGS: ListingSeed[] = [
     price: 28000,
     price_period: "month",
     negotiable: false,
-    city: "Pune",
-    locality: "Baner",
+    city: "Mumbai",
+    locality: "Borivali West",
     private_address:
-      "Flat 702, Fictional Heights, 18 Example Road, Baner, Pune 411045",
+      "Flat 702, Fictional Heights, 18 Example Road, Borivali West, Mumbai 400092",
     internal_notes:
       "Do not publish until the photographs are uploaded and the society NOC is on file.",
-    owner_name: "Fictional Owner — Baner 1BHK",
+    owner_name: "Fictional Owner — Borivali West 1BHK",
     bedrooms: 1,
     bathrooms: 1,
     area_value: 620,
@@ -464,7 +464,7 @@ export function buildDemoLeads(properties: StaffProperty[]): Lead[] {
       phone: "+91 00000 00031",
       email: "priya.raman@example.invalid",
       message:
-        "We are a couple looking to move to Koregaon Park before the end of the month. Is the society RWA manageable, and what does the owner say about the deposit?",
+        "We are a couple looking to move to Bandra West before the end of the month. Is the society RWA manageable, and what does the owner say about the deposit?",
       source: "property_form",
       status: "visit_scheduled",
       preferred_contact: "whatsapp",
@@ -482,7 +482,7 @@ export function buildDemoLeads(properties: StaffProperty[]): Lead[] {
       phone: "+91 00000 00032",
       email: null,
       message:
-        "Saw the Indiranagar listing while looking at options in Bengaluru. The family is relocating in March. Please share the floor plan.",
+        "Saw the Khar West listing while looking at options in Mumbai. The family is relocating in March. Please share the floor plan.",
       source: "property_form",
       status: "contacted",
       preferred_contact: "phone",
@@ -500,7 +500,7 @@ export function buildDemoLeads(properties: StaffProperty[]): Lead[] {
       phone: "+91 00000 00033",
       email: "meera.iyer@example.invalid",
       message:
-        "Do you handle long-term rentals in Kokapet as well? Not urgent yet — I am still comparing agencies.",
+        "Do you handle long-term rentals in Malad West as well? Not urgent yet — I am still comparing agencies.",
       source: "contact_form",
       status: "new",
       preferred_contact: "email",
@@ -534,7 +534,7 @@ export function buildDemoNotes(): LeadNote[] {
       id: note(3),
       lead_id: lead(2),
       author_id: DEMO_AGENT_FARAH,
-      body: "Left a voicemail. Seller's advocate has the floor plan; collecting it tomorrow. Buyer is in Bengaluru until Friday.",
+      body: "Left a voicemail. Seller's advocate has the floor plan; collecting it tomorrow. Buyer is in Mumbai until Friday.",
       created_at: activityAt(-8, 17, 10),
       author: null,
     },

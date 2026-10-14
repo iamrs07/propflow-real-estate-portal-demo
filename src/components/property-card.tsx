@@ -61,6 +61,9 @@ export function PropertyCard({
             {PROPERTY_TYPE_LABELS[property.property_type]}
           </span>
           {property.negotiable ? <Badge tone="neutral">Negotiable</Badge> : null}
+          <Badge tone="navy" className="ml-auto">
+            Demo listing
+          </Badge>
         </div>
 
         <h3 className="mt-3 font-display text-lg leading-snug text-navy-900">

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { getAgency } from "@/lib/data/public";
 import { isDemoMode } from "@/lib/env";
+import { MUMBAI_LOCALITIES } from "@/lib/domain";
 import { telHref, whatsappHref } from "@/lib/format";
 import { EnquiryForm } from "@/components/enquiry-form";
-import { Card, DetailRow, SectionHeading } from "@/components/ui";
+import { Card, DetailRow, SectionHeading, Alert } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +19,7 @@ export default async function AboutPage() {
 
   const phone = telHref(agency.phone, { inert: isDemoMode() });
   const whatsapp = whatsappHref(agency.whatsapp, { inert: isDemoMode() });
+  const demo = isDemoMode();
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -26,68 +28,76 @@ export default async function AboutPage() {
           About us
         </p>
         <h1 className="mt-3 font-display text-3xl text-navy-900 sm:text-4xl">
-          A small brokerage, deliberately
+          {agency.name}
         </h1>
       </header>
 
+      {demo && (
+        <Alert tone="caution" className="mt-6" title="Demonstration content">
+          <p className="mt-2 text-sm leading-relaxed">
+            This installation is a demonstration. The agency name, agents, listings, photos,
+            enquiries, and contact details are all fictional. No real property data, prices, or
+            contact information are present. Replace this content with your verified business
+            information before going live.
+          </p>
+        </Alert>
+      )}
+
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-6">
-          {agency.about ? (
-            <div className="space-y-4 text-[15px] leading-relaxed text-sand-700">
-              {agency.about.split("\n\n").map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
-          ) : null}
-
           <section>
-            <h2 className="font-display text-2xl text-navy-900">How a viewing works</h2>
-            <ol className="mt-5 space-y-5">
-              {[
-                {
-                  title: "Send an enquiry",
-                  body: "Use the form on any listing, or the contact form on this page. You choose how we contact you.",
-                },
-                {
-                  title: "We call you back",
-                  body: "An agent confirms the details, answers your questions, and checks the home is still available.",
-                },
-                {
-                  title: "We arrange the visit",
-                  body: "You pick a slot. We confirm it with the owner or seller and send you the address on the day.",
-                },
-                {
-                  title: "You decide in writing",
-                  body: "If you want to proceed, we put the terms in writing before anything is signed or paid.",
-                },
-              ].map((step, index) => (
-                <li key={step.title} className="flex gap-4">
-                  <span
-                    aria-hidden="true"
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold-500/60 font-display text-sm text-gold-700"
-                  >
-                    {index + 1}
-                  </span>
-                  <div>
-                    <p className="font-medium text-navy-900">{step.title}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-sand-700">{step.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+            <h2 className="font-display text-2xl text-navy-900">What we do</h2>
+            <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-sand-700">
+              <p>
+                {agency.name} is a small Mumbai brokerage working a short list of homes across
+                Mumbai City and Mumbai Suburban only.
+              </p>
+              <p>
+                We keep our areas tight — Mumbai City (Colaba to Mahim), Mumbai Suburban Western
+                (Bandra to Borivali), Mumbai Suburban Central (Dadar to Mulund), and Mumbai Suburban
+                Harbour (Chembur to Trombay) — so we actually know the buildings, not just the
+                brochures.
+              </p>
+              {demo && (
+                <p className="text-caution-700">
+                  This description is demonstration content. Replace it with your verified business
+                  information before going live.
+                </p>
+              )}
+            </div>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl text-navy-900">Areas we cover</h2>
+            <h2 className="font-display text-2xl text-navy-900">Service area</h2>
+            <p className="mt-2 text-sm text-sand-600">
+              We serve Mumbai City and Mumbai Suburban only. Adjacent Mumbai Metropolitan Region
+              locations (Mira Road, Bhayandar, Thane, Kalyan, Panvel, Navi Mumbai, and others) are
+              not part of our core service area.
+            </p>
             <div className="mt-4 flex flex-wrap gap-2">
-              {agency.service_areas.map((area) => (
-                <span
-                  key={area}
-                  className="rounded-full border border-sand-300 bg-white px-3.5 py-1.5 text-sm text-navy-800"
-                >
-                  {area}
-                </span>
-              ))}
+              {MUMBAI_LOCALITIES.filter(
+                (area) =>
+                  !["Mira Road", "Bhayandar", "Thane", "Thane West", "Thane East", "Dombivli", "Kalyan", "Panvel", "New Panvel", "Kharghar", "Kamothe", "Kalamboli", "Taloja", "Uran", "Navi Mumbai", "Vashi", "Sanpada", "Nerul", "CBD Belapur", "Airoli", "Ghansoli", "Koparkhairane", "Turbhe"].includes(
+                    area,
+                  ),
+              )
+                .slice(0, 24)
+                .map((area) => (
+                  <span
+                    key={area}
+                    className="rounded-full border border-sand-300 bg-white px-3.5 py-1.5 text-sm text-navy-800"
+                  >
+                    {area}
+                  </span>
+                ))}
+              <span className="rounded-full border border-sand-300 bg-white px-3.5 py-1.5 text-sm text-navy-500">
+                +{MUMBAI_LOCALITIES.filter(
+                  (area) =>
+                    !["Mira Road", "Bhayandar", "Thane", "Thane West", "Thane East", "Dombivli", "Kalyan", "Panvel", "New Panvel", "Kharghar", "Kamothe", "Kalamboli", "Taloja", "Uran", "Navi Mumbai", "Vashi", "Sanpada", "Nerul", "CBD Belapur", "Airoli", "Ghansoli", "Koparkhairane", "Turbhe"].includes(
+                      area,
+                    ),
+                ).length - 24} more
+              </span>
             </div>
           </section>
         </div>

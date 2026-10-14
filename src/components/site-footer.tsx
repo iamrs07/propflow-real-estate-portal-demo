@@ -4,12 +4,17 @@ import { SIGN_IN_PATH } from "@/lib/auth-paths";
 import { listSentence, telHref, whatsappHref } from "@/lib/format";
 
 /** `contactInert` is supplied by the server layout; see SiteHeader for why. */
-export function SiteFooter({ agency, contactInert = false }: { agency: Agency; contactInert?: boolean }) {
+export function SiteFooter({ agency, contactInert = false, isDemo = false }: { agency: Agency; contactInert?: boolean; isDemo?: boolean }) {
   const phone = telHref(agency.phone, { inert: contactInert });
   const whatsapp = whatsappHref(agency.whatsapp, { inert: contactInert });
 
   return (
     <footer className="mt-auto bg-navy-900 text-navy-100">
+      {isDemo ? (
+        <div className="border-b border-gold-500/30 bg-gold-100 text-navy-900 text-xs text-center py-1">
+          Demo mode — fictional agency, fictional listings, fictional enquiries
+        </div>
+      ) : null}
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <p className="font-display text-xl text-white">{agency.name}</p>
@@ -52,7 +57,7 @@ export function SiteFooter({ agency, contactInert = false }: { agency: Agency; c
             </li>
             <li>
               <Link href="/about" className="text-navy-200 transition-colors hover:text-gold-400">
-                About &amp; contact
+                About & contact
               </Link>
             </li>
             <li>
@@ -87,7 +92,7 @@ export function SiteFooter({ agency, contactInert = false }: { agency: Agency; c
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
             © {new Date().getFullYear()} {agency.name}. Demonstration installation — fictional
-            agency, fictional listings.
+            agency, fictional listings, fictional prices, fictional photos.
           </p>
           <p>Property data is fictional and not an offer to transact.</p>
         </div>

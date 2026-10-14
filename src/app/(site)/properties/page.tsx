@@ -6,7 +6,7 @@ import { listingFacetFromQuery } from "@/lib/validation";
 import { PropertyCard } from "@/components/property-card";
 import { PropertyFilters as Filters } from "@/components/property-filters";
 import ListingSkeleton from "@/components/listing-skeleton";
-import { EmptyState } from "@/components/ui";
+import { EmptyState, LinkButton } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
 
@@ -84,8 +84,8 @@ async function Results({ searchParams }: { searchParams: Promise<SearchParams> }
           Homes for rent and sale
         </h1>
         <p className="mt-3 text-[15px] leading-relaxed text-sand-700">
-          Only published, currently available homes appear here. Draft and archived listings never
-          leave the office.
+          Only published, currently available homes in Mumbai appear here. Draft and archived
+          listings never leave the office.
         </p>
       </header>
 
@@ -96,8 +96,9 @@ async function Results({ searchParams }: { searchParams: Promise<SearchParams> }
       <div className="mt-10">
         {properties.length === 0 ? (
           <EmptyState
-            title="No homes match those filters"
-            description="Try widening the price range, choosing a different locality, or clearing the keyword."
+            title="No Mumbai homes match those filters"
+            description="Try widening the price range, choosing a different Mumbai locality, or clearing the keyword. All demo listings are in Mumbai City and Mumbai Suburban."
+            action={<LinkButton href="/properties">Clear all filters</LinkButton>}
           />
         ) : (
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

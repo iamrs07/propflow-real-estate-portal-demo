@@ -4,6 +4,7 @@ import {
   BEDROOM_CHOICES,
   LISTING_FACETS,
   LISTING_FACET_LABELS,
+  MUMBAI_LOCALITIES,
   PROPERTY_TYPES,
   PROPERTY_TYPE_LABELS,
   SORT_OPTIONS,
@@ -12,7 +13,7 @@ import type { FilterOptions } from "@/lib/data/public";
 import { Button, Input, Labeled, Select, cx } from "@/components/ui";
 
 /**
- * Listing filters.
+ * Listing filters — Mumbai-focused.
  *
  * A plain GET form: it works with JavaScript disabled, is keyboard
  * navigable end to end, and keeps the current filter state in the URL so a
@@ -38,6 +39,10 @@ export function PropertyFilters({
       filters.priceMax,
   );
 
+  const mumbaiLocalities = options.localities.filter((l) =>
+    MUMBAI_LOCALITIES.includes(l as (typeof MUMBAI_LOCALITIES)[number]),
+  );
+
   return (
     <form
       action="/properties"
@@ -51,7 +56,7 @@ export function PropertyFilters({
             id="f-search"
             name="search"
             type="search"
-            placeholder="Locality, building or reference code"
+            placeholder="Mumbai locality, building or reference code"
             defaultValue={filters.search ?? ""}
             maxLength={80}
           />
@@ -80,20 +85,15 @@ export function PropertyFilters({
         </Labeled>
 
         <Labeled label="City" htmlFor="f-city">
-          <Select id="f-city" name="city" defaultValue={filters.city ?? ""}>
-            <option value="">All cities</option>
-            {options.cities.map((city) => (
-              <option key={city} value={city}>
-                {city}
-              </option>
-            ))}
+          <Select id="f-city" name="city" defaultValue={filters.city ?? "Mumbai"}>
+            <option value="Mumbai">Mumbai</option>
           </Select>
         </Labeled>
 
         <Labeled label="Locality" htmlFor="f-locality">
           <Select id="f-locality" name="locality" defaultValue={filters.locality ?? ""}>
-            <option value="">All localities</option>
-            {options.localities.map((locality) => (
+            <option value="">All Mumbai localities</option>
+            {mumbaiLocalities.map((locality) => (
               <option key={locality} value={locality}>
                 {locality}
               </option>

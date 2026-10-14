@@ -29,6 +29,17 @@ export function EnquiryForm({
   const id = (name: string) => `${uid}-${name}`;
 
   if (state.success) {
+    if (state.notice === "demo") {
+      return (
+        <div className="rounded-lg border border-caution-700/30 bg-caution-100 px-5 py-6">
+          <p className="font-display text-xl text-caution-700">Demo only</p>
+          <p className="mt-2 text-sm leading-relaxed text-navy-800">
+            This enquiry was not sent to the agency, and no one will contact you. Please do not
+            enter real contact details — this is a demonstration installation.
+          </p>
+        </div>
+      );
+    }
     return (
       <div className="rounded-lg border border-positive-600/30 bg-positive-100 px-5 py-6">
         <p className="font-display text-xl text-positive-600">Enquiry received</p>
