@@ -1,10 +1,13 @@
-PropFlow - Sale Package
+Sale Listing - PropFlow
 
-DEMO URL (TBD): Replace with deployed Vercel URL
+DEMO URL: https://propflow-real-estate.vercel.app
 
-Tech: Next.js 16, React 19, TypeScript 5, Tailwind 4, Supabase
+Demo accounts (synthetic - for evaluation only):
+- admin@northstar.demo / PropFlowDemo!2026
+- rohan@northstar.demo / PropFlowDemo!2026
+- farah@northstar.demo / PropFlowDemo!2026
 
-Demo accounts (synthetic): admin@northstar.demo / PropFlowDemo!2026 (also rohan/farah)
+Tech: Next.js 16, React 19, TS 5, Tailwind 4, Supabase
 
-Limitations: Demo in-memory (not persistent across restarts). No real emails/WhatsApp.
+Notes: Demo mode in-memory (not persistent). No email/WhatsApp. Mumbai-focused.
 
